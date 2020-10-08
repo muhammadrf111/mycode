@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="in">
+<head>
+    <title>Dokumen</title>
+    <style type="text/css">
+    
+    @font-face {
+    				font-family: "league";
+    				src: url('LeagueSpartan-Bold.otf') format('truetype');
+   }
+    
+    @keyframes animationSide {
+    				from {
+    								width: 0;
+    							}
+    				to {
+    								width: 100%;
+    						}
+    }
+    
+    @keyframes animationNav {
+    				from {
+    								right: -250px;
+    							}
+    				to {
+    								right: 65px;
+    						}
+    }
+    * {
+    				margin: 0;
+    				padding: 0;
+    	}
+    body {
+    				background: #ddd;
+    		}
+    .container {
+           position: fixed;
+           top: 0;
+           width: 100%;
+           box-shadow: 0 5px 3px rgba(0,0,0,.3);
+           
+           
+    }
+    .container .logo h2 {
+    				font-family: "league";
+    				color: gold;
+    				
+    }
+    .container .nav {
+    				position: fixed;
+    				top: 54px;
+    				left: 0;
+    				padding: 20px;
+    				display: none;
+    				background: blueviolet;
+    			  width: 0;
+    				overflow: hidden;
+    				box-shadow: 0 5px 3px rgba(0,0,0,.3);
+    				
+    }
+    .nav ul {
+    		    margin-top: -21px;
+    		    animation: animationNav .2s forwards;
+    				
+    }
+    .nav ul li {
+    				list-style: none;
+    				padding-right: 30px;
+    				font-size: 19px;
+    				margin: 15px;
+    				text-align: left;
+    }
+    .nav ul li a {
+    				display: block;
+    				position: absolute;
+    				text-decoration: none;
+    				color: #555;
+    				animation: animationNav .3s forwards;
+    				transition: .5s;
+    				font-family: "league";
+    }
+    .nav ul li a:hover {
+    				color: white;
+    				
+    				font-size: 20px;
+    				
+    }
+    .closebtn {
+    				position: absolute;
+    				top: 220px;
+    				right: 55px;
+    				font-size: 50px;
+    				color: red;
+    				display: none;
+    				
+    }
+    .container  .logo {
+    				display: flex;
+    				justify-content: space-between;
+    				align-items: center;
+    				
+    				background: blueviolet;
+    				padding: 13px;
+    				
+    }
+    .logo h2 {
+    				color: white;
+    }
+    
+    .logo .toggle {
+    				display: flex;
+    				justify-content: space-between;
+    				aligm-items: center;
+    				flex-direction: column;
+    				height: 25px;
+    }
+    
+    .toggle span {
+    				height: 4px;
+    				width: 25px;
+    				background: white;
+    				border-radius: 3px;
+    				box-shadow: 0 5px 3px rgba(0,0,0,.3);
+    }
+    
+    
+    
+    </style>
+</head>
+<body>
+    <div class="container">
+    
+      <a href="#"><span class="closebtn" id="close">&times</span></a>
+     
+     <div id="sidenav" class="nav">
+     
+    
+     <ul>
+     <li><a href="#">Home</a></li><br>
+     <li><a href="#">Artikel</a></li><br>
+     <li><a href="#">About</a></li><br>
+     <li><a href="#">Solutions Learn</a></li><br>
+     </ul>
+     </div>
+    
+     <div class="logo">
+     <h2>Muhammadrf</h2>
+         
+     <a href="#"><div class="toggle" id="open">
+      <span></span>
+      <span></span>
+      <span></span>
+     </div>
+     </a>    
+     </div>
+    </div>
+    
+    
+    <script type="text/JavaScript">
+    
+    const open = document.getElementById('open');
+    
+    const close = document.getElementById('close');
+    
+    open.addEventListener('click', function() {
+    
+    const sidenav = document.getElementById('sidenav').style.animation = 'animationSide .2s forwards';
+    
+    const close = document.getElementById('close').style.display = 'block';			
+   
+    const nav = document.querySelector('.nav').style.display = 'block';				
+   
+    				
+    });
+    
+    
+    close.addEventListener('click',function() {
+    				
+    const sidenav = document.getElementById('sidenav').style.width = '0px';	
+    
+    const close = document.getElementById('close').style.display = 'none';			
+   
+    const nav = document.querySelector('.nav').style.display = 'none';				
+    			
+    				
+    				
+    				
+    				
+    });
+    
+    
+    </script>
+    
+</body>
+</html>
